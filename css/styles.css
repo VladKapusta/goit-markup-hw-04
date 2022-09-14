@@ -23,7 +23,7 @@
     0px 2px 2px rgba(0, 0, 0, 0.12);
   --box-shadow-exsemples: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    --button-acent-color: #188CE8;
+  --button-acent-color: #188ce8;
 }
 html {
   box-sizing: border-box;
@@ -220,12 +220,16 @@ body {
   border-radius: 4px;
 }
 .features-list-titel {
+  margin-top: 0;
   margin-bottom: 10px;
 
   color: var(--titel-color);
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+}
+.features-list-text {
+  margin: 0;
 }
 
 /* Чим ми займаємось  */
@@ -318,7 +322,6 @@ body {
   background-color: var(--acent-color);
   fill: var(--white-color);
 }
-
 
 /* Наші клієнти */
 .clients-titel {
@@ -466,7 +469,11 @@ body {
   flex-wrap: wrap;
   gap: 30px;
 }
-.exsemples-item:hover {
+.exsemples-link {
+  display: inline-block;
+}
+.exsemples-link:hover,
+.exsemples-link:focus {
   box-shadow: var(--box-shadow-exsemples);
 }
 .item-card {

@@ -23,6 +23,7 @@
     0px 2px 2px rgba(0, 0, 0, 0.12);
   --box-shadow-exsemples: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    --button-acent-color: #188CE8;
 }
 html {
   box-sizing: border-box;
@@ -52,7 +53,11 @@ body {
 
 .list {
   list-style: none;
+  margin: 0;
   padding: 0;
+}
+.link {
+  text-decoration: none;
 }
 
 .section {
@@ -61,6 +66,9 @@ body {
 }
 .pfoto {
   display: block;
+}
+.icon {
+  fill: inherit;
 }
 
 /* Шапка сторінки */
@@ -88,8 +96,6 @@ body {
 }
 .nav-list {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
   margin-left: 93px;
 }
 .nav-list > .item:not(:last-child) {
@@ -101,7 +107,6 @@ body {
   padding-bottom: 32px;
 
   color: var(--titel-color);
-  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -123,7 +128,6 @@ body {
   align-items: center;
   color: var(--text-color);
   fill: var(--text-color);
-  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -190,12 +194,14 @@ body {
   line-height: 1.87;
   letter-spacing: 0.06em;
 }
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--button-acent-color);
+}
 
 /* Наші переваги */
 .features-list {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 .features-list .item {
   flex-basis: calc((100%-90px) / 4);
@@ -204,27 +210,22 @@ body {
   margin-right: 30px;
 }
 .icon-features {
-  padding: 25px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
   margin-bottom: 30px;
 
   background-color: var(--bg-button);
   border-radius: 4px;
 }
-.icon-features .icon {
-  display: block;
-}
 .features-list-titel {
-  margin-top: 0;
   margin-bottom: 10px;
 
   color: var(--titel-color);
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-}
-.features-list-text {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 /* Чим ми займаємось  */
@@ -243,8 +244,6 @@ body {
 }
 .product-list {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 .product-list .item {
   display: flex;
@@ -269,8 +268,6 @@ body {
 }
 .team-list {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 .team-list > .item {
   padding-bottom: 30px;
@@ -321,9 +318,7 @@ body {
   background-color: var(--acent-color);
   fill: var(--white-color);
 }
-.icon {
-  fill: inherit;
-}
+
 
 /* Наші клієнти */
 .clients-titel {
@@ -338,14 +333,16 @@ body {
 }
 .clients-list {
   display: flex;
-  margin: 0;
 }
 .clients-list > .item {
   width: calc((100% - 150px) / 6);
 }
 .clients-link {
-  display: block;
-  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+
   border: 1px solid var(--team-sotial-color);
   border-radius: 4px;
   fill: var(--team-sotial-color);
@@ -366,6 +363,7 @@ body {
 }
 .content {
   display: flex;
+  align-items: baseline;
 }
 .footer .logo {
   color: var(--white-color);
@@ -381,7 +379,6 @@ body {
   margin-bottom: 10px;
 }
 .address-list .link {
-  text-decoration: none;
   font-style: normal;
   color: var(--white-color);
 }
@@ -395,10 +392,9 @@ body {
   color: var(--white-color);
 }
 .subscribe {
-  padding-top: 12px;
   margin-left: 72px;
 }
-.subscribe-titel {
+.subscribe-text {
   margin-top: 0;
   margin-bottom: 20px;
   color: var(--white-color);
@@ -435,10 +431,7 @@ body {
 .filter-list {
   display: flex;
   justify-content: center;
-  margin-top: 0;
   margin-bottom: 50px;
-}
-.filter-list .item {
 }
 .filter-list .item:not(:last-child) {
   margin-right: 8px;
@@ -472,8 +465,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 .exsemples-item:hover {
   box-shadow: var(--box-shadow-exsemples);
@@ -506,4 +497,5 @@ body {
 
   font-size: 16px;
   line-height: 1.87;
+  color: var(--text-color);
 }
